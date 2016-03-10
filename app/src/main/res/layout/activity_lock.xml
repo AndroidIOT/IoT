@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="dpy.iot_eep.lock">
+
+    <TextView android:text="Internet Controlled Lock" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="20dp"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ID"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="73dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_alignStart="@+id/locksend" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PASS"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/ID"
+        android:layout_alignEnd="@+id/ID"
+        android:layout_alignStart="@+id/ID"
+        android:password="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ID"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/ID"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PASS"
+        android:id="@+id/textView5"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/PASS"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="33dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOCK"
+        android:id="@+id/lockswitch"
+        android:checked="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/PASS"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_red_light"
+        android:minWidth="100dp"
+        android:minHeight="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:id="@+id/locksend"
+        android:layout_below="@+id/lockswitch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:background="@android:color/holo_green_light"
+        android:longClickable="false"
+        android:onClick="send_lock" />
+
+</RelativeLayout>

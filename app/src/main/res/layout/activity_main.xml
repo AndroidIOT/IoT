@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+
+    >
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Data"
+        android:onClick="on_send_click"
+        android:layout_marginLeft="0dp"
+        android:enabled="true"
+        android:clickable="true"
+        android:background="@color/material_deep_teal_500"
+        android:textColor="@color/abc_primary_text_material_dark"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/switch3"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 1"
+        android:id="@+id/switch1"
+        android:checked="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="152dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textSize="10dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 2"
+        android:id="@+id/switch2"
+        android:checked="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_above="@+id/switch3"
+        android:layout_alignEnd="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="10dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAN"
+        android:id="@+id/switch3"
+        android:checked="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/switch1"
+        android:layout_alignStart="@+id/switch1"
+        android:layout_marginTop="87dp"
+        android:textStyle="bold"
+        android:textSize="10dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch4"
+        android:checked="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignTop="@+id/switch3"
+        android:layout_alignStart="@+id/switch2"
+        android:text="LED 3"
+        android:textStyle="bold"
+        android:textSize="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Home Automation"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:password="false"
+        android:phoneNumber="false"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:textSize="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Access LOCK"
+        android:id="@+id/button"
+        android:onClick="openLock"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp" />
+
+</RelativeLayout>
